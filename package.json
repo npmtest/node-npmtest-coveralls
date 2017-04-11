@@ -1,1 +1,40 @@
-{     "devDependencies": {         "coveralls": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-coveralls",     "homepage": "https://github.com/npmtest/node-npmtest-coveralls",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-coveralls.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "test coverage for [coveralls (v2.13.0)](https://github.com/nickmerwin/node-coveralls#readme) [![npm package](https://img.shields.io/npm/v/npmtest-coveralls.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-coveralls) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-coveralls.svg)](https://travis-ci.org/npmtest/node-npmtest-coveralls)",
+    "devDependencies": {
+        "coveralls": "*",
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-coveralls",
+    "keywords": [
+        "coverage",
+        "test",
+        "coveralls"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_coveralls.js",
+    "name": "npmtest-coveralls",
+    "nameAlias": "npmtest_coveralls",
+    "nameOriginal": "npmtest-coveralls",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-coveralls.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
