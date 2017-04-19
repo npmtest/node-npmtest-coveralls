@@ -1,7 +1,10 @@
-# test coverage for  [coveralls (v2.13.0)](https://github.com/nickmerwin/node-coveralls#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-coveralls.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-coveralls) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-coveralls.svg)](https://travis-ci.org/npmtest/node-npmtest-coveralls)
+# npmtest-coveralls
+
+#### test coverage for  [coveralls (v2.13.0)](https://github.com/nickmerwin/node-coveralls#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-coveralls.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-coveralls) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-coveralls.svg)](https://travis-ci.org/npmtest/node-npmtest-coveralls)
+
 #### takes json-cov output into stdin and POSTs to coveralls.io
 
-[![NPM](https://nodei.co/npm/coveralls.png?downloads=true)](https://www.npmjs.com/package/coveralls)
+[![NPM](https://nodei.co/npm/coveralls.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/coveralls)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-coveralls/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-coveralls/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-coveralls/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-coveralls/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-coveralls/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-coveralls/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-coveralls/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-coveralls/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-coveralls/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-coveralls/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-coveralls%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-coveralls/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-coveralls/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-coveralls/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-coveralls/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-coveralls%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-coveralls/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-coveralls/build/test-report.html](https://npmtest.github.io/node-npmtest-coveralls/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-coveralls/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-coveralls/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-coveralls/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-coveralls/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-coveralls/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-coveralls/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-coveralls/build/screenCapture.npmPackageListing.svg)
 
@@ -38,17 +47,14 @@
     "contributors": [
         {
             "name": "Gregg Caines",
-            "email": "gregg@caines.ca",
             "url": "http://caines.ca"
         },
         {
             "name": "Joshua Ma",
-            "email": "github@joshma.com",
             "url": "http://joshma.com"
         },
         {
             "name": "Alan Gutierrez",
-            "email": "alan@prettyrobots.com",
             "url": "http://www.prettyrobots.com/"
         },
         {
@@ -57,22 +63,18 @@
         },
         {
             "name": "elliotcable",
-            "email": "github@elliottcable.name",
             "url": "http://elliottcable.name/"
         },
         {
             "name": "Slotos",
-            "email": "slotos@gmail.com",
             "url": "http://slotos.net"
         },
         {
             "name": "mattjmorrison",
-            "email": "mattjmorrison@mattjmorrison.com",
             "url": "http://mattjmorrison.com"
         },
         {
             "name": "Arpad Borsos",
-            "email": "arpad.borsos@googlemail.com",
             "url": "http://swatinem.de/"
         },
         {
@@ -117,17 +119,14 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "cainus",
-            "email": "gregg@caines.ca"
+            "name": "cainus"
         },
         {
-            "name": "nickmerwin",
-            "email": "n@mer.fm"
+            "name": "nickmerwin"
         }
     ],
     "name": "coveralls",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/nickmerwin/node-coveralls.git"
