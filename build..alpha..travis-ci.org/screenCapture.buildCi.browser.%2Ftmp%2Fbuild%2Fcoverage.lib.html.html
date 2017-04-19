@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-coveralls/coveralls/lib/getOptions.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-coveralls/node_modules/coveralls/lib/getOptions.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-coveralls">npmtest-coveralls (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-coveralls/coveralls/lib/getOptions.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-coveralls/node_modules/coveralls/lib/getOptions.js</span></h1>
     <h2>
         
         Statements: <span class="metric">8.77% <small>(10 / 114)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-coveralls/coveralls/lib/</a> &#187; getOptions.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-coveralls/node_modules/coveralls/lib/</a> » getOptions.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -585,136 +583,136 @@ var index = require('../index');
 var logger = require('./logger')();
 var fetchGitData = require('./fetchGitData');
 &nbsp;
-var getBaseOptions = <span class="fstat-no" title="function not covered" >function(cb){</span>
-<span class="cstat-no" title="statement not covered" >  var options = {};</span>
-<span class="cstat-no" title="statement not covered" >  var git_commit = process.env.COVERALLS_GIT_COMMIT;</span>
-<span class="cstat-no" title="statement not covered" >  var git_branch = process.env.COVERALLS_GIT_BRANCH;</span>
-<span class="cstat-no" title="statement not covered" >  var git_committer_name, git_committer_email, git_message;</span>
+var getBaseOptions = <span class="fstat-no" title="function not covered">function(cb){</span>
+<span class="cstat-no" title="statement not covered">  var options = {};</span>
+<span class="cstat-no" title="statement not covered">  var git_commit = process.env.COVERALLS_GIT_COMMIT;</span>
+<span class="cstat-no" title="statement not covered">  var git_branch = process.env.COVERALLS_GIT_BRANCH;</span>
+<span class="cstat-no" title="statement not covered">  var git_committer_name, git_committer_email, git_message;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var match = (process.env.CI_PULL_REQUEST || "").match(/(\d+)$/);</span>
+<span class="cstat-no" title="statement not covered">  var match = (process.env.CI_PULL_REQUEST || "").match(/(\d+)$/);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (match) {</span>
-<span class="cstat-no" title="statement not covered" >    options.service_pull_request = match[1];</span>
+<span class="cstat-no" title="statement not covered">  if (match) {</span>
+<span class="cstat-no" title="statement not covered">    options.service_pull_request = match[1];</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.env.TRAVIS){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = 'travis-ci';</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_id = process.env.TRAVIS_JOB_ID;</span>
-<span class="cstat-no" title="statement not covered" >    options.service_pull_request = process.env.TRAVIS_PULL_REQUEST;</span>
-<span class="cstat-no" title="statement not covered" >    git_commit = 'HEAD';</span>
-<span class="cstat-no" title="statement not covered" >    git_branch = process.env.TRAVIS_BRANCH;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.TRAVIS){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = 'travis-ci';</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_id = process.env.TRAVIS_JOB_ID;</span>
+<span class="cstat-no" title="statement not covered">    options.service_pull_request = process.env.TRAVIS_PULL_REQUEST;</span>
+<span class="cstat-no" title="statement not covered">    git_commit = 'HEAD';</span>
+<span class="cstat-no" title="statement not covered">    git_branch = process.env.TRAVIS_BRANCH;</span>
   }
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.env.DRONE){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = 'drone';</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_id = process.env.DRONE_BUILD_NUMBER;</span>
-<span class="cstat-no" title="statement not covered" >    options.service_pull_request = process.env.DRONE_PULL_REQUEST;</span>
-<span class="cstat-no" title="statement not covered" >    git_committer_name = process.env.DRONE_COMMIT_AUTHOR;</span>
-<span class="cstat-no" title="statement not covered" >    git_committer_email = process.env.DRONE_COMMIT_AUTHOR_EMAIL;</span>
-<span class="cstat-no" title="statement not covered" >    git_commit = process.env.DRONE_COMMIT;</span>
-<span class="cstat-no" title="statement not covered" >    git_branch = process.env.DRONE_BRANCH;</span>
-<span class="cstat-no" title="statement not covered" >    git_message = process.env.DRONE_COMMIT_MESSAGE;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.DRONE){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = 'drone';</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_id = process.env.DRONE_BUILD_NUMBER;</span>
+<span class="cstat-no" title="statement not covered">    options.service_pull_request = process.env.DRONE_PULL_REQUEST;</span>
+<span class="cstat-no" title="statement not covered">    git_committer_name = process.env.DRONE_COMMIT_AUTHOR;</span>
+<span class="cstat-no" title="statement not covered">    git_committer_email = process.env.DRONE_COMMIT_AUTHOR_EMAIL;</span>
+<span class="cstat-no" title="statement not covered">    git_commit = process.env.DRONE_COMMIT;</span>
+<span class="cstat-no" title="statement not covered">    git_branch = process.env.DRONE_BRANCH;</span>
+<span class="cstat-no" title="statement not covered">    git_message = process.env.DRONE_COMMIT_MESSAGE;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.env.JENKINS_URL){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = 'jenkins';</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_id = process.env.BUILD_ID;</span>
-<span class="cstat-no" title="statement not covered" >    options.service_pull_request = process.env.ghprbPullId;</span>
-<span class="cstat-no" title="statement not covered" >    git_commit = process.env.GIT_COMMIT;</span>
-<span class="cstat-no" title="statement not covered" >    git_branch = process.env.GIT_BRANCH;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.JENKINS_URL){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = 'jenkins';</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_id = process.env.BUILD_ID;</span>
+<span class="cstat-no" title="statement not covered">    options.service_pull_request = process.env.ghprbPullId;</span>
+<span class="cstat-no" title="statement not covered">    git_commit = process.env.GIT_COMMIT;</span>
+<span class="cstat-no" title="statement not covered">    git_branch = process.env.GIT_BRANCH;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.env.CIRCLECI){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = 'circleci';</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_id = process.env.CIRCLE_BUILD_NUM;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.CIRCLECI){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = 'circleci';</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_id = process.env.CIRCLE_BUILD_NUM;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (process.env.CI_PULL_REQUEST) {</span>
-<span class="cstat-no" title="statement not covered" >      var pr = process.env.CI_PULL_REQUEST.split('/pull/');</span>
-<span class="cstat-no" title="statement not covered" >      options.service_pull_request = pr[1];</span>
+<span class="cstat-no" title="statement not covered">    if (process.env.CI_PULL_REQUEST) {</span>
+<span class="cstat-no" title="statement not covered">      var pr = process.env.CI_PULL_REQUEST.split('/pull/');</span>
+<span class="cstat-no" title="statement not covered">      options.service_pull_request = pr[1];</span>
     }
-<span class="cstat-no" title="statement not covered" >    git_commit = process.env.CIRCLE_SHA1;</span>
-<span class="cstat-no" title="statement not covered" >    git_branch = process.env.CIRCLE_BRANCH;</span>
+<span class="cstat-no" title="statement not covered">    git_commit = process.env.CIRCLE_SHA1;</span>
+<span class="cstat-no" title="statement not covered">    git_branch = process.env.CIRCLE_BRANCH;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.env.CI_NAME &amp;&amp; process.env.CI_NAME === 'codeship'){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = 'codeship';</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_id = process.env.CI_BUILD_NUMBER;</span>
-<span class="cstat-no" title="statement not covered" >    git_commit = process.env.CI_COMMIT_ID;</span>
-<span class="cstat-no" title="statement not covered" >    git_branch = process.env.CI_BRANCH;</span>
-<span class="cstat-no" title="statement not covered" >    git_committer_name = process.env.CI_COMMITTER_NAME;</span>
-<span class="cstat-no" title="statement not covered" >    git_committer_email = process.env.CI_COMMITTER_EMAIL;</span>
-<span class="cstat-no" title="statement not covered" >    git_message = process.env.CI_COMMIT_MESSAGE;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.CI_NAME &amp;&amp; process.env.CI_NAME === 'codeship'){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = 'codeship';</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_id = process.env.CI_BUILD_NUMBER;</span>
+<span class="cstat-no" title="statement not covered">    git_commit = process.env.CI_COMMIT_ID;</span>
+<span class="cstat-no" title="statement not covered">    git_branch = process.env.CI_BRANCH;</span>
+<span class="cstat-no" title="statement not covered">    git_committer_name = process.env.CI_COMMITTER_NAME;</span>
+<span class="cstat-no" title="statement not covered">    git_committer_email = process.env.CI_COMMITTER_EMAIL;</span>
+<span class="cstat-no" title="statement not covered">    git_message = process.env.CI_COMMIT_MESSAGE;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.env.WERCKER){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = 'wercker';</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_id = process.env.WERCKER_BUILD_ID;</span>
-<span class="cstat-no" title="statement not covered" >    git_commit = process.env.WERCKER_GIT_COMMIT;</span>
-<span class="cstat-no" title="statement not covered" >    git_branch = process.env.WERCKER_GIT_BRANCH;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.WERCKER){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = 'wercker';</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_id = process.env.WERCKER_BUILD_ID;</span>
+<span class="cstat-no" title="statement not covered">    git_commit = process.env.WERCKER_GIT_COMMIT;</span>
+<span class="cstat-no" title="statement not covered">    git_branch = process.env.WERCKER_GIT_BRANCH;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.env.GITLAB_CI){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = 'gitlab-ci';</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_number = process.env.CI_BUILD_NAME;</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_id = process.env.CI_BUILD_ID;</span>
-<span class="cstat-no" title="statement not covered" >    git_commit = process.env.CI_BUILD_REF;</span>
-<span class="cstat-no" title="statement not covered" >    git_branch = process.env.CI_BUILD_REF_NAME;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.GITLAB_CI){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = 'gitlab-ci';</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_number = process.env.CI_BUILD_NAME;</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_id = process.env.CI_BUILD_ID;</span>
+<span class="cstat-no" title="statement not covered">    git_commit = process.env.CI_BUILD_REF;</span>
+<span class="cstat-no" title="statement not covered">    git_branch = process.env.CI_BUILD_REF_NAME;</span>
   }
-<span class="cstat-no" title="statement not covered" >  if(process.env.APPVEYOR){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = 'appveyor';</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_number = process.env.APPVEYOR_BUILD_NUMBER;</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_id = process.env.APPVEYOR_BUILD_ID;</span>
-<span class="cstat-no" title="statement not covered" >    git_commit = process.env.APPVEYOR_REPO_COMMIT;</span>
-<span class="cstat-no" title="statement not covered" >    git_branch = process.env.APPVEYOR_REPO_BRANCH;</span>
+<span class="cstat-no" title="statement not covered">  if(process.env.APPVEYOR){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = 'appveyor';</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_number = process.env.APPVEYOR_BUILD_NUMBER;</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_id = process.env.APPVEYOR_BUILD_ID;</span>
+<span class="cstat-no" title="statement not covered">    git_commit = process.env.APPVEYOR_REPO_COMMIT;</span>
+<span class="cstat-no" title="statement not covered">    git_branch = process.env.APPVEYOR_REPO_BRANCH;</span>
   }
-<span class="cstat-no" title="statement not covered" >  if(process.env.SURF_SHA1){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = 'surf';</span>
-<span class="cstat-no" title="statement not covered" >    git_commit = process.env.SURF_SHA1;</span>
-<span class="cstat-no" title="statement not covered" >    git_branch = process.env.SURF_REF;</span>
+<span class="cstat-no" title="statement not covered">  if(process.env.SURF_SHA1){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = 'surf';</span>
+<span class="cstat-no" title="statement not covered">    git_commit = process.env.SURF_SHA1;</span>
+<span class="cstat-no" title="statement not covered">    git_branch = process.env.SURF_REF;</span>
   }
-<span class="cstat-no" title="statement not covered" >  options.run_at = process.env.COVERALLS_RUN_AT || JSON.stringify(new Date()).slice(1, -1);</span>
-<span class="cstat-no" title="statement not covered" >  if (process.env.COVERALLS_SERVICE_NAME){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_name = process.env.COVERALLS_SERVICE_NAME;</span>
+<span class="cstat-no" title="statement not covered">  options.run_at = process.env.COVERALLS_RUN_AT || JSON.stringify(new Date()).slice(1, -1);</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.COVERALLS_SERVICE_NAME){</span>
+<span class="cstat-no" title="statement not covered">    options.service_name = process.env.COVERALLS_SERVICE_NAME;</span>
   }
-<span class="cstat-no" title="statement not covered" >  if (process.env.COVERALLS_SERVICE_JOB_ID){</span>
-<span class="cstat-no" title="statement not covered" >    options.service_job_id = process.env.COVERALLS_SERVICE_JOB_ID;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.COVERALLS_SERVICE_JOB_ID){</span>
+<span class="cstat-no" title="statement not covered">    options.service_job_id = process.env.COVERALLS_SERVICE_JOB_ID;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!git_commit || !git_branch) {</span>
-<span class="cstat-no" title="statement not covered" >    var data = require('./detectLocalGit')();</span>
-<span class="cstat-no" title="statement not covered" >    if (data) {</span>
-<span class="cstat-no" title="statement not covered" >      git_commit = git_commit || data.git_commit;</span>
-<span class="cstat-no" title="statement not covered" >      git_branch = git_branch || data.git_branch;</span>
+<span class="cstat-no" title="statement not covered">  if (!git_commit || !git_branch) {</span>
+<span class="cstat-no" title="statement not covered">    var data = require('./detectLocalGit')();</span>
+<span class="cstat-no" title="statement not covered">    if (data) {</span>
+<span class="cstat-no" title="statement not covered">      git_commit = git_commit || data.git_commit;</span>
+<span class="cstat-no" title="statement not covered">      git_branch = git_branch || data.git_branch;</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (process.env.COVERALLS_PARALLEL) {</span>
-<span class="cstat-no" title="statement not covered" >    options.parallel = true;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.COVERALLS_PARALLEL) {</span>
+<span class="cstat-no" title="statement not covered">    options.parallel = true;</span>
   }
 &nbsp;
   // try to get the repo token as an environment variable
-<span class="cstat-no" title="statement not covered" >  if (process.env.COVERALLS_REPO_TOKEN) {</span>
-<span class="cstat-no" title="statement not covered" >    options.repo_token = process.env.COVERALLS_REPO_TOKEN;</span>
+<span class="cstat-no" title="statement not covered">  if (process.env.COVERALLS_REPO_TOKEN) {</span>
+<span class="cstat-no" title="statement not covered">    options.repo_token = process.env.COVERALLS_REPO_TOKEN;</span>
   } else {
     // try to get the repo token from a .coveralls.yml file
-<span class="cstat-no" title="statement not covered" >    var yml = path.join(process.cwd(), '.coveralls.yml');</span>
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >      if (fs.statSync(yml).isFile()) {</span>
-<span class="cstat-no" title="statement not covered" >        var coveralls_yaml_conf = yaml.safeLoad(fs.readFileSync(yml, 'utf8'));</span>
-<span class="cstat-no" title="statement not covered" >        options.repo_token = coveralls_yaml_conf.repo_token;</span>
-<span class="cstat-no" title="statement not covered" >        if(coveralls_yaml_conf.service_name) {</span>
-<span class="cstat-no" title="statement not covered" >          options.service_name = coveralls_yaml_conf.service_name;</span>
+<span class="cstat-no" title="statement not covered">    var yml = path.join(process.cwd(), '.coveralls.yml');</span>
+<span class="cstat-no" title="statement not covered">    try {</span>
+<span class="cstat-no" title="statement not covered">      if (fs.statSync(yml).isFile()) {</span>
+<span class="cstat-no" title="statement not covered">        var coveralls_yaml_conf = yaml.safeLoad(fs.readFileSync(yml, 'utf8'));</span>
+<span class="cstat-no" title="statement not covered">        options.repo_token = coveralls_yaml_conf.repo_token;</span>
+<span class="cstat-no" title="statement not covered">        if(coveralls_yaml_conf.service_name) {</span>
+<span class="cstat-no" title="statement not covered">          options.service_name = coveralls_yaml_conf.service_name;</span>
         }
       }
     } catch(ex){
-<span class="cstat-no" title="statement not covered" >      logger.warn("Repo token could not be determined.  Continuing without it." +</span>
+<span class="cstat-no" title="statement not covered">      logger.warn("Repo token could not be determined.  Continuing without it." +</span>
                   "This is necessary for private repos only, so may not be an issue at all.");
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (git_commit){</span>
-<span class="cstat-no" title="statement not covered" >    fetchGitData({</span>
+<span class="cstat-no" title="statement not covered">  if (git_commit){</span>
+<span class="cstat-no" title="statement not covered">    fetchGitData({</span>
       head: {
         id: git_commit,
         committer_name: git_committer_name,
@@ -722,38 +720,38 @@ var getBaseOptions = <span class="fstat-no" title="function not covered" >functi
         message: git_message
       },
       branch: git_branch
-    }, <span class="fstat-no" title="function not covered" >function(err, git){</span>
-<span class="cstat-no" title="statement not covered" >      if (err){</span>
-<span class="cstat-no" title="statement not covered" >        logger.warn('there was an error getting git data: ', err);</span>
+    }, <span class="fstat-no" title="function not covered">function(err, git){</span>
+<span class="cstat-no" title="statement not covered">      if (err){</span>
+<span class="cstat-no" title="statement not covered">        logger.warn('there was an error getting git data: ', err);</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        options.git = git;</span>
+<span class="cstat-no" title="statement not covered">        options.git = git;</span>
       }
-<span class="cstat-no" title="statement not covered" >      return cb(err, options);</span>
+<span class="cstat-no" title="statement not covered">      return cb(err, options);</span>
     });
   } else {
-<span class="cstat-no" title="statement not covered" >    return cb(null, options);</span>
+<span class="cstat-no" title="statement not covered">    return cb(null, options);</span>
   }
 };
 &nbsp;
-var getOptions = <span class="fstat-no" title="function not covered" >function(cb, _userOptions){</span>
-<span class="cstat-no" title="statement not covered" >  if (!cb){</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error('getOptions requires a callback');</span>
+var getOptions = <span class="fstat-no" title="function not covered">function(cb, _userOptions){</span>
+<span class="cstat-no" title="statement not covered">  if (!cb){</span>
+<span class="cstat-no" title="statement not covered">    throw new Error('getOptions requires a callback');</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var userOptions = _userOptions || {};</span>
+<span class="cstat-no" title="statement not covered">  var userOptions = _userOptions || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  getBaseOptions(<span class="fstat-no" title="function not covered" >function(err, options){</span></span>
+<span class="cstat-no" title="statement not covered">  getBaseOptions(<span class="fstat-no" title="function not covered">function(err, options){</span></span>
     // minimist populates options._ with non-option command line arguments
-<span class="cstat-no" title="statement not covered" >    var firstNonOptionArgument = index.options._[0];</span>
+<span class="cstat-no" title="statement not covered">    var firstNonOptionArgument = index.options._[0];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (firstNonOptionArgument)</span>
-<span class="cstat-no" title="statement not covered" >      options.filepath = firstNonOptionArgument;</span>
+<span class="cstat-no" title="statement not covered">    if (firstNonOptionArgument)</span>
+<span class="cstat-no" title="statement not covered">      options.filepath = firstNonOptionArgument;</span>
 &nbsp;
     // lodash or else would be better, but no need for the extra dependency
-<span class="cstat-no" title="statement not covered" >    for (var option in userOptions) {</span>
-<span class="cstat-no" title="statement not covered" >      options[option] = userOptions[option];</span>
+<span class="cstat-no" title="statement not covered">    for (var option in userOptions) {</span>
+<span class="cstat-no" title="statement not covered">      options[option] = userOptions[option];</span>
     }
-<span class="cstat-no" title="statement not covered" >    cb(err, options);</span>
+<span class="cstat-no" title="statement not covered">    cb(err, options);</span>
   });
 };
 &nbsp;
@@ -761,10 +759,11 @@ module.exports.getBaseOptions = getBaseOptions;
 module.exports.getOptions = getOptions;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 19:23:31 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 03:51:18 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
